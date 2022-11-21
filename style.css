@@ -1,0 +1,154 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #0c0c0c;
+}
+
+.loader{
+    position: relative;
+    width: 250px;
+    height: 250px;
+    background-color: #1a1a1f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    border-radius: 5px;
+    overflow: hidden;
+    -webkit-box-reflect: below 1px linear-gradient(transparent,#0004);
+}
+
+.loader a{
+    text-decoration: none ;
+    font-family: consolas;
+    color: #fff;
+    font-size: 18px;
+    letter-spacing: 2px;
+    transition: 0.5s;
+    border-right: 1px solid #AF111C;
+   
+    animation: typing 5s steps(8) infinite;
+}
+
+.loader:hover a {
+    color: #fff;
+    border-right: 1px solid #111;
+}
+
+
+@keyframes typing {
+    0%,90%,100%{
+        width: 0px;
+    }
+
+    30%,60%{
+        width: 80.5px;
+    }
+}
+
+.loader:hover{
+    background-color: #AF111C ;
+    box-shadow: 0 0 5px  #AF111C, 
+                0 0 25px #AF111C,
+                0 0 50px #AF111C, 
+                0 0 200px #AF111C;
+}
+
+.loader span{
+    position: absolute;
+    display: block;
+}
+
+.loader span:nth-child(1){
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, transparent,#AF111C );
+    animation: animate1 2s linear infinite;
+    animation-delay: 0s;
+}
+
+@keyframes animate1 {
+    0%{
+        left: -100%;
+    }
+
+    50%,100%{
+        left: 100%;
+    }
+}
+
+
+
+.loader span:nth-child(3){
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(270deg, transparent,#AF111C );
+    animation: animate3 2s linear infinite;
+    animation-delay: 1s;
+
+}
+@keyframes animate3 {
+    0%{
+        right: -100%;
+    }
+
+    50%,100%{
+        right: 100%;
+    }
+}
+
+
+
+.loader span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent,#AF111C );
+    animation: animate2 2s linear infinite;
+    animation-delay: 0.5s;
+}
+
+@keyframes animate2 {
+    0%{
+        top: -100%;
+    }
+
+    50%,100%{
+        top: 100%;
+    }
+}
+
+.loader span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent,#AF111C );
+    animation: animate4 2s linear infinite;
+    animation-delay: 1.5s;
+
+}
+
+
+@keyframes animate4 {
+    0%{
+        bottom: -100%;
+    }
+
+    50%,100%{
+        bottom: 100%;
+    }
+}
